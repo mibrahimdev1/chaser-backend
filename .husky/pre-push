@@ -1,0 +1,22 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$BRANCH_NAME" = "staging" ]; then
+  echo "🚀 Running pre-push checks for staging..."
+
+  # Run tests and linting before pushing
+  npm install
+  # npm run lint
+
+  if [ $? -ne 0 ]; then
+    echo "❌ Tests or linting failed! Fix issues before pushing to staging."
+    exit 1
+  fi
+
+  echo "✅ All checks passed. Proceeding with push to staging..."
+
+  # Call sync-branches.sh to merge staging into testing before the push
+  sh "$(dirname "$0")/sync-branches.sh"
+fi

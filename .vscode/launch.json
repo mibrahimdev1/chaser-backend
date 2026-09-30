@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program (Dev)",
+      "program": "${workspaceFolder}/src/index.js",
+      // "runtimeExecutable": "nodemon",
+      "runtimeExecutable": "/Users/mymac/.nvm/versions/node/v18.20.6/bin/node",
+      "restart": true,
+      "env": {
+        "NODE_ENV": "development",
+        "NODE_NO_WARNINGS": "1"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "autoAttachChildProcesses": true,
+      "runtimeArgs": ["--inspect=9230"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+module.exports.authValidation = require('./auth.validation');
+module.exports.userValidation = require('./user.validation');
+module.exports.feedValidation = require('./feed.validation');
+module.exports.jobValidation = require('./job.validation');
+module.exports.storyValidation = require('./story.validation');
+module.exports.eventValidation = require('./event.validation');
+module.exports.planValidation = require('./plan.validation');
+module.exports.groupValidation = require('./group.validation');
+module.exports.groupInvitationValidation = require('./groupInvitation.validation');
+module.exports.contentValidation = require('./content.validation');
+module.exports.helpcenterValidation = require('./helpcenter.validation');
